@@ -1,0 +1,7 @@
+<label class="xs6">
+	Author
+	<select name="author">
+		<option value="">-- none --</option>
+		__authors::@dankolz/authors/author-option__
+	</select>
+</label>

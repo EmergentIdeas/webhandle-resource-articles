@@ -4,7 +4,7 @@ import addCallbackToPromise from 'add-callback-to-promise'
 import simplePropertyInjector from 'dreck/binders/simple-property-injector.js'
 import createValuedCheckboxInjector from 'dreck/binders/create-valued-checkbox-injector.js'
 
-// import wh from 'webhandle'
+import wh from 'webhandle'
 
 export default class ResourceArticlesDreck extends Dreck {
 	constructor(options) {
@@ -28,6 +28,10 @@ export default class ResourceArticlesDreck extends Dreck {
 	}
 	addAdditionalFormInformation(focus, req, res, callback) {
 		let p = new Promise(async (resolve, reject) => {
+
+			if(wh.services.author) {
+				res.locals.authors = await wh.services.author.fetch({})
+			}
 			// let groups = await wh.services.sponsorgroups.fetch()
 			// res.locals.groups = groups
 			resolve(focus)

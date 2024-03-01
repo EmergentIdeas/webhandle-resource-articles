@@ -1,6 +1,6 @@
 {
 	"name": "@webhandle/resource-articles",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "server-lib/resource-articles-integrator.mjs",
 	"browser": "client-lib/resource-articles-integrator.mjs",

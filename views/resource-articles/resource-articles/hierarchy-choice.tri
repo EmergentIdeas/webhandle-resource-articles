@@ -1,0 +1,4 @@
+<label class="xs6">
+	Categories
+	__({hierarchy: hierarchy})::@webhandle/hierarchies/groupChecksBox__
+</label>

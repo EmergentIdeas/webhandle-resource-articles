@@ -39,4 +39,5 @@
 		<input name="pubDate" type="date" />
 	</label>
 	__authors??this::./authors-choice__
+	__hierarchy??this::./hierarchy-choice__
 </div>

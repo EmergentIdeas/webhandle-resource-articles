@@ -21,7 +21,7 @@ export default class ResourceArticlesDreck extends Dreck {
 					(req, focus, next) => {
 						simplePropertyInjector(req, focus, curDreck.bannedInjectMembers, next)
 					}
-					, createValuedCheckboxInjector('groups')
+					, createValuedCheckboxInjector('resource-articles')
 				]
 			}
 		)
@@ -31,6 +31,9 @@ export default class ResourceArticlesDreck extends Dreck {
 
 			if(wh.services.author) {
 				res.locals.authors = await wh.services.author.fetch({})
+			}
+			if(wh.services.hierarchies) {
+				res.locals.hierarchy = (await wh.services.hierarchies.fetch({name: 'resource-articles'}))[0]
 			}
 			// let groups = await wh.services.sponsorgroups.fetch()
 			// res.locals.groups = groups
